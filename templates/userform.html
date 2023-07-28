@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form class="form-horizontal">
+    <fieldset>
+      <!-- Form Name -->
+      <legend>Form Name</legend>
+
+      <!-- Text input -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="customer_name">Customer Name:</label>
+        <div class="col-md-4">
+          <input id="customer_name" name="customer_name" type="text" placeholder="" class="form-control input-md" required="" />
+          <span class="help-block">help</span>
+        </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="customer_address">Address:</label>
+        <div class="col-md-4">
+          <input id="customer_address" name="customer_address" type="text" placeholder="" class="form-control input-md" />
+        </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="contact">Mobile No :</label>
+        <div class="col-md-4">
+          <input id="contact" name="contact" type="text" placeholder="Contact Number" class="form-control input-md" />
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-4">
+          <button id="submit" name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <h5>{{ customer_name }} -- {{ customer_address }} -- {{ contact }}</h5>
+  
+{% endblock %}

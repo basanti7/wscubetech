@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="welcome-banner">{{ welcome_message }}</h1>
+
+  <h2>Use of for loop</h2>
+  {% for course in simple_list %}
+    <h5>{{ course }}</h5>
+  {% endfor %}
+
+  <h2>Use of for loop in object</h2>
+  {% for person in object_list %}
+    <h5>{{ forloop.counter }}-> Name: {{ person.name }} -- {{ person.designation }}</h5>
+  {% endfor %}
+
+  <h2>use of if</h2>
+  <h2>Array Size is: {{ numbers|length }}</h2>
+  {% for n in numbers %}
+    {% if n|divisibleby:'2' %}
+      <h6>{{ n }} is Even</h6>
+    {% else %}
+      <h6>{{ n }} is odd</h6>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
