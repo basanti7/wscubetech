@@ -11,10 +11,10 @@ def aboutUs(request):
 
 
 def homePage(request):
-    service_data = Service.objects.all()
+    service_data = Service.objects.all().order_by('service_title')
     # use loop inside html template to print all data
     for a in service_data:
-        print(a)
+        print(a.service_title)
 
     data = {
         'welcome_message': 'This is an welcome message from homePage(request) method located in views.py file. CSS file loaded from static for background color.',
